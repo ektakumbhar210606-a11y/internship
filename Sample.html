@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<html>
 <body>
-    <div>hello i am ekta</div>
+
+<div id="box1" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"
+     style="width:150px; height:150px; border:2px solid black;">
+  <img id="img1" src="../ad1.jpg" draggable="true"
+       ondragstart="dragstartHandler(event)">
+</div>
+
+<div id="box2" ondrop="dropHandler(event)" ondragover="dragoverHandler(event)"
+     style="width:150px; height:150px; border:2px solid black; margin-top:20px;">
+</div>
+
+<script>
+function dragstartHandler(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function dragoverHandler(ev) {
+  ev.preventDefault(); // allow drop
+}
+
+function dropHandler(ev) {
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+
 </body>
 </html>
