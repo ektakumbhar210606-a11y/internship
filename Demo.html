@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .headercontain {
+            display: flex;
+            width: 100%;
+            border: 1px solid black;
+            background-color: cornsilk;
+            justify-content: space-between;
+        }
+        .header1{
+            
+            width: 50%;
+            padding: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         
+        }
+        .header2{
+           
+            width: 30%;
+            padding: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-style: solid;
+            border-color: black;
+            border-width: 0px 1px 0px 1px;
+        }
+        .header3{
+           
+            width: 20%;
+            padding: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         
+        }
+        .main{
+            display: flex;
+            background-color: bisque;
+            height: calc(100vh - 138px);
+        }
+        .leftside{
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .middle{
+            width: 50%;
+            display: flex;
+            border-style: solid;
+            border-color: black;
+            border-width: 0px 1px 0px 1px;
+            justify-content: center;
+            flex-direction: column;
+            
+        }
+        .rightside{
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main1{
+           
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+         
+        }
+        .main2{
+           
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+            border-style: solid;
+            border-color: black;
+            border-width: 1px 0px 1px 0px;
+        }
+        .main3{
+            
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            align-items: center;
+        }
+        .footercontain{
+            display: flex;
+            width: 100%;
+            border: 1px solid black;
+            background-color: cornsilk;
+            justify-content: space-between;
+        }
+        .footer1{
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+
+        }
+        .footer2{
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            border-style: solid;
+            border-color: black;
+            border-width: 0px 1px 0px 1px;
+         }
+         .footer3{
+            width: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+
+         }
+
+    </style>
+</head>
+
+<body>
+    <div class="maincontain" style="width: 100vw; height: 100vh;">
+    <div class="headercontain">
+        <div class="header1">Header1</div>
+        <div class="header2">Header2</div>
+        <div class="header3">Header3</div>
+
+    </div>
+    <div class="main">
+        <div class="leftside">
+            <div style="text-align: center;">left_space</div>
+        </div>
+
+        <div class="middle">
+            <div class="main1">Main1</div>
+             <div class="main2">main2</div>
+              <div class="main3">Main3</div>
+        </div>
+        <div class="rightside">
+            <div style="text-align: center;">right_space</div>
+        </div>
+    </div>
+    <div class="footercontain">
+        <div class="footer1">Footer1</div>
+        <div class="footer2">Footer2</div>
+        <div class="footer3">Footer3</div>
+    </div>
+
+    </div>
+</body>
+
+</html>
