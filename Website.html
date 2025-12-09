@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bar {
+            width: 100%;
+             display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+
+        }
+
+        .imglogo1 {
+            Width: 160px;
+            height: 41px;
+        }
+
+        .maincontainer {
+            width: 100vw;
+            height: 100vh;
+            padding: 50px 100px;
+            
+            overflow: auto;
+        }
+
+        nav {
+            width: 100%;
+         }
+
+        ul,li {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+
+        }
+
+        .maincontenet {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .leftcontent {
+            width: 60%;
+            height: 338px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 20px;
+            color: #212121;
+        }
+
+        .imgclass {
+            width: 40%;
+            height: auto
+        }
+        .secondcontainer{
+            width: 100%;
+            height: fit-content;
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #212121;
+            flex-direction: column;
+            position: relative;
+            }
+            .titlesection{
+                max-width: 952px;
+                height: fit-content;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+        .servicecards{
+            width: 100%;
+            height: fit-content;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+            }
+        .card1, .card2,.card3,.card4{
+            max-width: 280px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-start;
+            align-items: start;
+            gap: 20px;
+            padding: 45px;
+            border: 1px solid black;
+            border-radius: 20px;
+            height: -webkit-fill-available;
+            }
+
+        .cardtitle{
+            font-size: 20px;
+            color: #212121;
+        }
+        .cardcontent{
+            font-size: 16px;
+            color: #757575;
+            text-align: left;
+        }
+        .overlayimg{
+            position: absolute;
+            opacity: 0.6;
+        }
+        
+
+    </style>
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div class="bar">
+            <div class="imglogo">
+                <img class="imglogo1" src="image1.png" />
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li>Home</li>
+                    <li>Find doctor</li>
+                    <li>Apps</li>
+                    <li>Testimonials</li>
+                    <li>About us</li>
+                </ul>
+            </div>
+
+        </div>
+        <br />
+        <div class="maincontenet">
+            <div class="leftcontent">
+                <div style="font-size: 34px; font-weight: 700; ">
+                    Virtual healthcare <br />
+                    for you</div>
+                <div style="font-size: 21px; font-family: mulish; font-weight: 300;">
+                    Trafalgar provides progressive, and affordable <br />
+                    healthcare, accessible on mobile and online <br />
+                    for everyone</div>
+
+                <div class="button">
+                    <button
+                        style="background-color: #458FF6; color: white; height: 40px; width: 130px; border-radius: 55px; border: none;">Consult
+                        today</button>
+
+                </div>
+            </div>
+            <div class="imgclass">
+                <img src="image2.png" style="width: 100%; height: auto;" />
+            </div>
+        </div>
+
+        <div class="secondcontainer">
+            <div class="titlesection">
+               <div style="font-size: 36px;"> <b>Our services </b></div><br/><br/>
+               <p style="flex-wrap: wrap;"> We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment 
+                with our highly qualified doctors you can consult with us which type of service is suitable for your health </p>    
+            </div>
+
+            <div class="overlayimg">
+                <img src="left_imge.png" />
+            </div>
+
+            <div class="servicecards">
+                <div class="card1">
+                    <img style="width: 50px; height: 50px;" src="icon1.png" />
+                    <div class="cardtitle"> <b>Search doctor</b> </div>
+                    <div class="cardcontent">
+                        Choose your doctor from thousands of specialist, general, and trusted hospitals
+                    </div>
+                </div>
+
+                    <div class="card2">
+                    <img style="width: 50px; height: 50px;" src="icon2.png" />
+                    <div class="cardtitle"> <b>online pharmacy</b> </div>
+                    <div class="cardcontent">
+                        Buy your medicines with our mobile application with a simple delivery system
+                    </div>
+                </div>
+
+                 <div class="card3">
+                    <img style="width: 50px; height: 50px;" src="icon3.png" />
+                    <div class="cardtitle"> <b>online pharmacy</b> </div>
+                    <div class="cardcontent">
+                        Free consultation with our trusted doctors and get the best recomendations
+                    </div>
+                </div>
+
+            </div>
+
+             <div class="servicecards">
+                <div class="card4">
+                    <img style="width: 50px; height: 50px;" src="icon4.png" />
+                    <div class="cardtitle"> <b> Details info</b> </div>
+                    <div class="cardcontent">
+                        Free consultation with our trusted doctors and get the best recomendations
+                    </div>
+                </div>
+
+                    <div class="card2">
+                    <img style="width: 50px; height: 50px;" src="icon5.png" />
+                    <div class="cardtitle"> <b>emergency care</b> </div>
+                    <div class="cardcontent">
+                        You can get 24/7 urgent care for yourself or your children and your lovely family
+                    </div>
+                </div>
+
+                 <div class="card3">
+                    <img style="width: 50px; height: 50px;" src="icon6.png" />
+                    <div class="cardtitle"> <b>Tracking</b> </div>
+                    <div class="cardcontent">
+                        Track and save your medical history and health data
+                    </div>
+                </div>
+
+            </div>
+
+    
+    
+    
+    
+    </div>
+
+</body>
+
+</html>
