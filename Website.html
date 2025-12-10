@@ -14,10 +14,10 @@
 
         .bar {
             width: 100%;
-             display: flex;
+            display: flex;
             justify-content: space-between;
             align-items: center;
-           
+
 
         }
 
@@ -30,15 +30,16 @@
             width: 100vw;
             height: 100vh;
             padding: 50px 100px;
-            
+
             overflow: auto;
         }
 
         nav {
             width: 100%;
-         }
+        }
 
-        ul,li {
+        ul,
+        li {
             list-style: none;
             display: flex;
             gap: 30px;
@@ -69,7 +70,8 @@
             width: 40%;
             height: auto
         }
-        .secondcontainer{
+
+        .secondcontainer {
             width: 100%;
             height: fit-content;
             margin-top: 100px;
@@ -80,17 +82,20 @@
             color: #212121;
             flex-direction: column;
             position: relative;
-            }
-            .titlesection{
-                max-width: 952px;
-                height: fit-content;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 20px;
-            }
-        .servicecards{
+
+        }
+
+        .titlesection {
+           
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .servicecards {
             width: 100%;
             height: fit-content;
             margin-top: 30px;
@@ -98,35 +103,85 @@
             align-items: center;
             gap: 20px;
             justify-content: center;
-            }
-        .card1, .card2,.card3,.card4{
+        }
+
+        .card1,
+        .card2,
+        .card3,
+        .card4 {
             max-width: 280px;
             width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content:flex-start;
+            justify-content: flex-start;
             align-items: start;
             gap: 20px;
             padding: 45px;
             border: 1px solid black;
             border-radius: 20px;
             height: -webkit-fill-available;
-            }
+            background-color: white;
+            box-shadow: 10px 40px 50px 0px #E5E9F666;
 
-        .cardtitle{
+        }
+
+        .cardtitle {
             font-size: 20px;
             color: #212121;
         }
-        .cardcontent{
+
+        .cardcontent {
             font-size: 16px;
             color: #757575;
             text-align: left;
         }
-        .overlayimg{
+        .leftback{
             position: absolute;
-            opacity: 0.6;
+            top: 25px;
+            left: -241px;
+            width: 890px;
+            height: 660px;
         }
-        
+       
+         .maincontainer2{
+            flex-direction: row-reverse;
+            gap: 150px;
+            margin-top: 40px;
+         }
+
+         .leftcontent2{
+           align-items: flex-start;
+            text-align: left;
+         }
+         .custcard{
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+         }
+         .cardtext{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-start;
+            background-color: #458FF6;
+            border-radius: 10px;
+            margin:50px;
+            flex-direction: column;
+
+         }
+         .text{
+            Color: white;
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            width: 100%;
+            margin-top: 30px;
+            font-style: Mulish;
+         }
+         
 
     </style>
 </head>
@@ -148,7 +203,7 @@
             </div>
 
         </div>
-        <br />
+        
         <div class="maincontenet">
             <div class="leftcontent">
                 <div style="font-size: 34px; font-weight: 700; ">
@@ -171,77 +226,158 @@
             </div>
         </div>
 
-        <div class="secondcontainer">
-            <div class="titlesection">
-               <div style="font-size: 36px;"> <b>Our services </b></div><br/><br/>
-               <p style="flex-wrap: wrap;"> We provide to you the best choiches for you. Adjust it to your health needs and make sure your undergo treatment 
-                with our highly qualified doctors you can consult with us which type of service is suitable for your health </p>    
-            </div>
+        <div style="position: relative;">
+            <img class="leftback" src="./left_imge.png" layout="fill" alt="dfdsfsd" />
 
-            <div class="overlayimg">
-                <img src="left_imge.png" />
-            </div>
 
-            <div class="servicecards">
-                <div class="card1">
-                    <img style="width: 50px; height: 50px;" src="icon1.png" />
-                    <div class="cardtitle"> <b>Search doctor</b> </div>
-                    <div class="cardcontent">
-                        Choose your doctor from thousands of specialist, general, and trusted hospitals
-                    </div>
+            <div class="secondcontainer">
+                <div class="titlesection">
+                    <div style="font-size: 36px;"> <b>Our services </b></div><br /><br />
+                    <p style="flex-wrap: wrap;max-width: 952px;"> We provide to you the best choiches for you. Adjust it to your health
+                        needs and make sure your undergo treatment
+                        with our highly qualified doctors you can consult with us which type of service is suitable for
+                        your health </p>
                 </div>
+
+
+                <div class="servicecards">
+                    <div class="card1">
+                        <img style="width: 50px; height: 50px;" src="icon1.png" />
+                        <div class="cardtitle"> <b>Search doctor</b> </div>
+                        <div class="cardcontent">
+                            Choose your doctor from thousands of specialist, general, and trusted hospitals
+                        </div>
+                    </div>
 
                     <div class="card2">
-                    <img style="width: 50px; height: 50px;" src="icon2.png" />
-                    <div class="cardtitle"> <b>online pharmacy</b> </div>
-                    <div class="cardcontent">
-                        Buy your medicines with our mobile application with a simple delivery system
+                        <img style="width: 50px; height: 50px;" src="icon2.png" />
+                        <div class="cardtitle"> <b>online pharmacy</b> </div>
+                        <div class="cardcontent">
+                            Buy your medicines with our mobile application with a simple delivery system
+                        </div>
                     </div>
+
+                    <div class="card3">
+                        <img style="width: 50px; height: 50px;" src="icon3.png" />
+                        <div class="cardtitle"> <b>online pharmacy</b> </div>
+                        <div class="cardcontent">
+                            Free consultation with our trusted doctors and get the best recomendations
+                        </div>
+                    </div>
+
                 </div>
 
-                 <div class="card3">
-                    <img style="width: 50px; height: 50px;" src="icon3.png" />
-                    <div class="cardtitle"> <b>online pharmacy</b> </div>
-                    <div class="cardcontent">
-                        Free consultation with our trusted doctors and get the best recomendations
+                <div class="servicecards">
+                    <div class="card4">
+                        <img style="width: 50px; height: 50px;" src="icon4.png" />
+                        <div class="cardtitle"> <b> Details info</b> </div>
+                        <div class="cardcontent">
+                            Free consultation with our trusted doctors and get the best recomendations
+                        </div>
                     </div>
-                </div>
-
-            </div>
-
-             <div class="servicecards">
-                <div class="card4">
-                    <img style="width: 50px; height: 50px;" src="icon4.png" />
-                    <div class="cardtitle"> <b> Details info</b> </div>
-                    <div class="cardcontent">
-                        Free consultation with our trusted doctors and get the best recomendations
-                    </div>
-                </div>
 
                     <div class="card2">
-                    <img style="width: 50px; height: 50px;" src="icon5.png" />
-                    <div class="cardtitle"> <b>emergency care</b> </div>
-                    <div class="cardcontent">
-                        You can get 24/7 urgent care for yourself or your children and your lovely family
+                        <img style="width: 50px; height: 50px;" src="icon5.png" />
+                        <div class="cardtitle"> <b>emergency care</b> </div>
+                        <div class="cardcontent">
+                            You can get 24/7 urgent care for yourself or your children and your lovely family
+                        </div>
                     </div>
+
+                    <div class="card3">
+                        <img style="width: 50px; height: 50px;" src="icon6.png" />
+                        <div class="cardtitle"> <b>Tracking</b> </div>
+                        <div class="cardcontent">
+                            Track and save your medical history and health data
+                        </div>
+                    </div>
+
                 </div>
 
-                 <div class="card3">
-                    <img style="width: 50px; height: 50px;" src="icon6.png" />
-                    <div class="cardtitle"> <b>Tracking</b> </div>
-                    <div class="cardcontent">
-                        Track and save your medical history and health data
-                    </div>
+                <div  style="padding-top: 30px;">
+                     <button
+                        style="background-color: white; color: #458FF6; height: 40px; width: 130px; border-radius: 70px; border:1px solid #458FF6;">
+                        Learn more</button>
                 </div>
+
+
+
+
 
             </div>
+        </div>
 
-    
-    
-    
-    
+               <div class="maincontenet maincontainer2">
+            <div class="leftcontent leftcontent2">
+                
+                <div style="font-size: 34px; font-weight: 700; ">
+                    Leading healthcarec<br/> providers</div>
+                <div style="font-size: 21px; font-family: mulish; font-weight: 300;">
+                   Trafalgar provides progressive, and affordable <br/>
+                   healthcare, accessible on mobile and online for<br/>
+                    everyone. To us, it’s not just work. We take pride <br/>
+                    in the solutions we deliver</div>
+
+                <div class="button">
+                   <button
+                        style="background-color: white; color: #458FF6; height: 40px; width: 130px; border-radius: 70px; border:1px solid #458FF6;">
+                        Learn more</button>
+
+                </div>
+            </div>
+            <div class="imgclass">
+                <img src="page3.png" style="width: 100%; height: auto;" />
+            </div>
+        </div>
+
+        <div class="maincontenet ">
+            <div class="leftcontent">
+                <div style="font-size: 34px; font-weight: 700; ">
+                    Download our  <br />
+                    mobile apps</div>
+                <div style="font-size: 21px; font-family: mulish; font-weight: 300;">
+                    Trafalgar provides progressive, and affordable <br />
+                    healthcare, accessible on mobile and online <br />
+                    for everyone</div>
+
+                <div class="button">
+                       <button
+                        style="background-color: white; color: #458FF6; height: 40px; width: 130px; border-radius: 70px; border:1px solid #458FF6;">
+                        Download</button>
+
+                </div>
+            </div>
+            <div class="imgclass">
+                <img src="page4.png" style="width: 100%; height: auto;" />
+            </div>
+        </div>
+
+        <div class="custcard">
+            <div class="cardtext" >
+               <div class="text">what our customer are saying</div>
+            
+
+            <div class="custimg">
+                <img src="custimage.png" style="width: 100%; height: auto;" />
+            </div>
+
+            </div>
+            
+        </div>
+
+       
+            
+
+
+
+        </div>
+   
+   
+   
+   
+   
     </div>
 
 </body>
 
-</html>
+</html>     
