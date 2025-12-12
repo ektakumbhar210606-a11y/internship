@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Report - Week 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            padding: 40px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header h2 {
+            color: #34495e;
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .info-box {
+            background: #ecf0f1;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 25px;
+        }
+
+        .info-box p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .info-box strong {
+            color: #2c3e50;
+            display: inline-block;
+            width: 150px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        h4 {
+            color: #34495e;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p,
+        li {
+            font-size: 14px;
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .project-box {
+            background: #f0f8ff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #9b59b6;
+        }
+
+        .project-box h4 {
+            color: #9b59b6;
+            margin-top: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .skill-item {
+            background: #e8f5e9;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .skill-item::before {
+            content: "✓ ";
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .advanced-skill {
+            background: #fff3e0;
+        }
+
+        .advanced-skill::before {
+            content: "★ ";
+            color: #f39c12;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+
+        table th {
+            background: #34495e;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .highlight-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .tech-stack {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #2c3e50;
+            text-align: center;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+
+        .signature-section {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .signature-box {
+            text-align: center;
+        }
+
+        .signature-line {
+            border-top: 2px solid #333;
+            width: 200px;
+            margin-top: 50px;
+            padding-top: 5px;
+            font-size: 12px;
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+
+        .progress-bar {
+            background: #ecf0f1;
+            border-radius: 10px;
+            height: 25px;
+            margin: 10px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #3498db, #2ecc71);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        @media print {
+            body {
+                padding: 20px;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        .download-btn {
+            background: #9b59b6;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .download-btn:hover {
+            background: #8e44ad;
+        }
+
+        .comparison-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .week-summary {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 2px solid #dee2e6;
+        }
+
+        .week-summary h4 {
+            margin-top: 0;
+            color: #495057;
+        }
+    </style>
+</head>
+
+<body>
+   
+
+    <div class="header">
+        <h1>DHARMSINH DESAI UNIVERSITY</h1>
+        <h2>FACULTY OF TECHNOLOGY AND INFORMATION SCIENCE <br />BCA DEPARTMENT <br /> SEMESTER-VI</h2>
+        <p style="font-size: 14px; margin-top: 10px;"><b>8 December 25  - 12 December 25</b></p>
+    </div>
+
+     <div class="info-box">
+        <p><strong>Name:</strong> Ekta Kumbhar / Bhavika Dalbanjan</p>
+        <p><strong>Id:</strong> 23BCUOS053 /23BCUOS022</p>
+        <p><strong>Roll No:</strong> BC043 / BC017 </p>
+        <p><strong>Group code:</strong> S4</p>
+    </div>
+
+
+    <h3>Week 2 Learning Objectives</h3>
+    <!-- <ul>
+        <li><b>MON 1-DEC:</b><br />Enhance styling capabilities with advanced CSS techniques and external libraries</li>
+        <li><b>TUE 2-DEC:</b><br />Integrate third-party resources including Font Awesome icons</li>
+        <li><b>WED 3-DEC:</b><br />Implement multimedia elements (images, audio, video) with proper optimization</li>
+        <li><b>THU 4-DEC:</b><br />Develop a professional, multi-section website</li>
+        <li><b>FRI 5-DEC:</b><br />Master responsive design principles for mobile, tablet, and desktop</li>
+       
+    </ul>  -->
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Date</th>
+            <th>Learning Objectives</th>
+        </tr>
+        <tr>
+            <td>MON</td>
+            <td>8-DEC</td>
+            <td>Enhance styling capabilities with advanced CSS techniques </td>
+        </tr>
+        <tr>
+            <td>TUE</td>
+            <td>9-DEC</td>
+            <td>Implement multimedia elements (images, audio, video) with proper optimization</td>
+        </tr>
+        <tr>
+            <td>WED</td>
+            <td>10-DEC</td>
+            <td>Advanced positioning and layout techniques</td>
+        </tr>
+        <tr>
+            <td>THU</td>
+            <td>11-DEC</td>
+            <td>Advanced flex layout implementation</td>
+        </tr>
+        <tr>
+            <td>FRI</td>
+            <td>12-DEC</td>
+            <td>Develop a professional, multi-section website</td>
+
+        </tr>
+    </table>
+    <br/>
+    <div class="signature-section">
+        <div class="signature-box">
+            <div class="signature-line">
+                Internal Guide<br>
+                [Prof. Swati Patel]<br />
+                Assistant Professor, <br />BCA Department
+            </div>
+        </div>
+        <div class="signature-box">
+            <div class="signature-line">
+                External Guide<br>
+                [Mr. Mihir Patwa]<br />
+                Groovy technoweb Pvt. Ltd.
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+   
+
+
+    <div class="project-box">
+        <h4>1. Calculator Application </h4>
+        <p><strong>Project Description:</strong> Developed a fully functional calculator interface using HTML and CSS,
+            featuring a clean and intuitive design suitable for basic arithmetic operations.</p>
+
+        <p><strong>Key Features Implemented:</strong></p>
+        <ul>
+            <li>Digital display screen for input and calculation results</li>
+            <li>Grid-based button layout with proper spacing and alignment</li>
+            <li>Numeric buttons (0-9) and operation buttons (+, -, ×, ÷)</li>
+            <li>Clear (C) and equals (=) functionality buttons</li>
+            <li>Responsive design adapting to different screen sizes</li>
+            <li>Hover effects for improved user interaction</li>
+            <li>apply animations for blinking cursor</li>
+        </ul>
+
+        <p><strong>Technologies Used:</strong> HTML5, CSS3 (Flexbox, Grid)</p>
+
+        <p><strong>Learning Outcomes:</strong></p>
+        <ul>
+            <li>Mastered CSS Grid layout for creating button matrices</li>
+            <li>Implemented proper DOM structure for interactive elements</li>
+            <li>Applied CSS styling for calculator components including borders, shadows, and colors</li>
+            <li>Understood the importance of user interface consistency</li>
+        </ul>
+
+        <img src="./images/Calc.png" alt="Calculator Project Screenshot" style="    width: 281px;
+    height: 281px;">
+    </div>
+    <div class="page-break"></div>
+
+    <h3>Multimedia Integration</h3>
+
+    <div class="project-box">
+        <h4>2. Working with Media Elements</h4>
+
+        <p><strong>Audio Integration (A1.mp3):</strong></p>
+        <ul>
+            <li>Implemented HTML5 audio element with controls</li>
+            <li>Learned about audio formats and browser compatibility</li>
+            <li>Applied proper accessibility attributes (aria-labels)</li>
+            <li>Understood audio file optimization for web delivery</li>
+        </ul>
+
+        <p><strong>Video Integration (V1.mp4):</strong></p>
+        <ul>
+            <li>Embedded HTML5 video element with custom controls</li>
+            <li>Configured video attributes (autoplay, loop, muted)</li>
+            <li>Implemented responsive video sizing</li>
+            <li>Learned about video compression and web formats</li>
+        </ul>
+
+
+
+        <img src="./images/video.jpeg" alt="Calculator Project Screenshot" style="    width: 281px;
+    height: 281px;">
+    </div>
+
+    <div class="project-box">
+        <h4>3. CSS Positioning Practice</h4>
+        <p><strong>Project Description:</strong> Two comprehensive projects focused on exploring and understanding
+            different CSS positioning models and their practical applications in web layouts.</p>
+
+        <p><strong>Positioning Models Covered:</strong></p>
+        <ul>
+            <li><strong>Static Positioning:</strong> Default positioning behavior, understanding document flow</li>
+            <li><strong>Relative Positioning:</strong> Positioning elements relative to their normal position</li>
+            <li><strong>Absolute Positioning:</strong> Removing elements from document flow and positioning relative to
+                parent</li>
+            <li><strong>Fixed Positioning:</strong> Creating elements that stay fixed during scrolling</li>
+            <li><strong>Z-Index:</strong> Managing stacking context and layer ordering</li>
+        </ul>
+
+        <p><strong>Technologies Used:</strong> HTML5, CSS3 Positioning Properties</p>
+
+        <p><strong>Learning Outcomes:</strong></p>
+        <ul>
+            <li>Gained deep understanding of CSS positioning models</li>
+            <li>Learned when to use each positioning type appropriately</li>
+            <li>Mastered z-index and stacking context management</li>
+            <li>Practiced creating complex layouts with positioned elements</li>
+        </ul>
+        <img src="./images/pos.jpeg" alt="Calculator Project Screenshot" style="    width: 350px;height: 281px;">
+    </div>
+
+    <div class="project-box">
+        <h4>4. CSS Flexbox Layout Project</h4>
+
+        <p><strong>Description:</strong> A complete webpage wireframe created using CSS Flexbox.
+            The layout includes multiple headers, a multi-level main content section, side spacing areas,
+            and a structured footer — all arranged using flex containers.</p>
+
+        <p><strong>Flexbox Concepts Practiced:</strong></p>
+        <ul>
+            <li>Flex direction for vertical and horizontal stacking</li>
+            <li>Justify-content and align-items for spacing and alignment</li>
+            <li>Flex-grow and flex-shrink to control element sizing</li>
+            <li>Nested flex containers for arranging inner blocks</li>
+            <li>Creating responsive structure using flexible side spaces</li>
+        </ul>
+
+        <p><strong>Layout Sections Included:</strong></p>
+        <ul>
+            <li><strong>Header Row:</strong> Header1, Header2, Header3 aligned horizontally</li>
+            <li><strong>Main Area:</strong> Main1, main2, Main3 arranged vertically with side spaces (left_space,
+                right_space)</li>
+            <li><strong>Footer Row:</strong> Footer1, Footer2, Footer3 aligned horizontally</li>
+        </ul>
+
+        <p><strong>Technologies Used:</strong> HTML5, CSS3 Flexbox</p>
+
+        <p><strong>Learning Outcomes:</strong></p>
+        <ul>
+            <li>Built a complete page layout using pure Flexbox</li>
+            <li>Improved control over spacing, alignment, and structure</li>
+            <li>Understood how to design complex multi-section layouts</li>
+            <li>Practiced responsive behaviour using flexible containers</li>
+        </ul>
+
+        <img src="./images/Flex.jpeg" alt="Flexbox Layout Screenshot" style="width: 350px; height: 281px;">
+    </div>
+
+
+    <div class="project-box">
+        <h4>5. professional Website</h4>
+        <p><strong>Project Overview:</strong> The centerpiece of Week 2 was the development of a comprehensive,
+            professional website that integrates all skills and techniques learned during the first two weeks of the
+            internship. This project represents a significant milestone, demonstrating the ability to create
+            production-ready web applications.</p>
+
+        <p><strong>Website Structure and Features:</strong></p>
+        <ul>
+            <li><strong>Navigation Bar:</strong> Professional header with logo, navigation menu, and responsive design
+            </li>
+            <li><strong>Hero Section:</strong> Eye-catching landing area with headline, subheading, and call-to-action
+                button</li>
+            <li><strong>Features Section:</strong> Grid-based layout showcasing key features with icons and descriptions
+            </li>
+            <li><strong>About Section:</strong> Content area with image integration and detailed information</li>
+            <li><strong>Services Section:</strong> Service cards with icons, titles, and descriptions</li>
+            <li><strong>Footer:</strong> Complete with contact information, social media links, and copyright</li>
+        </ul>
+
+        <p><strong>Technical Implementation:</strong></p>
+        <ul>
+            <li>Semantic HTML5 structure for improved accessibility and SEO</li>
+            <li>Advanced CSS3 styling with custom properties and animations</li>
+            <li>Flexbox and Grid layouts for responsive design</li>
+            <li>Font Awesome icon integration (version 6.0+)</li>
+            <li>Responsive meta viewport configuration</li>
+            <li>Custom color scheme and typography system</li>
+            <li>Smooth scroll behavior and hover effects</li>
+            <li>Mobile-first responsive design approach</li>
+        </ul>
+
+        <div class="tech-stack">
+            <h4>Technology Stack:</h4>
+            <ul>
+                <li><strong>HTML5:</strong> Semantic markup, meta tags, structured content</li>
+                <li><strong>CSS3:</strong> Flexbox, Grid, transitions, transforms, custom properties</li>
+                <li><strong>Font Awesome:</strong> Icon library via CDN (6.0+)</li>
+                <li><strong>Google Fonts:</strong> Custom typography (if applicable)</li>
+                <li><strong>Responsive Design:</strong> Mobile-first approach with breakpoints</li>
+            </ul>
+        </div>
+        <img src="./images/web1.png" alt="Flexbox Layout Screenshot" style="width: 100%; height: 281px;">
+        <img src="./images/web2.png" alt="Flexbox Layout Screenshot" style="width: 100%; height: 281px;">
+        <img src="./images/web3.png" alt="Flexbox Layout Screenshot" style="width: 100%; height: 281px;">
+         <img src="./images/web4.png" alt="Flexbox Layout Screenshot" style="width: 100%; height: 281px;">
+        <img src="./images/web6.png" alt="Flexbox Layout Screenshot" style="width: 100%; height: 281px;"> 
+    </div>
+
+     <div class="page-break"></div>
+       
+    <div class="skills-grid">
+        <div class="advanced-skill">Professional website structure</div>
+        <div class="advanced-skill">External resource integration</div>
+        <div class="advanced-skill">Multimedia element handling</div>
+        <div class="advanced-skill">Advanced responsive design</div>
+        <div class="advanced-skill">CSS animations and transitions</div>
+        <div class="advanced-skill">Icon library integration</div>
+        <div class="advanced-skill">Asset optimization</div>
+        <div class="advanced-skill">Modern CSS architecture</div>
+        <div class="skill-item">Complete project workflow</div>
+        <div class="skill-item">Professional UI/UX patterns</div>
+    </div>
+    
+   
+
+
+    <h3>Weekly Progress Metrics</h3>
+
+    <div style="margin: 20px 0;">
+        <p><strong>HTML/CSS Proficiency:</strong></p>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 85%">85% - Advanced</div>
+        </div>
+
+        <p><strong>Responsive Design:</strong></p>
+        <div class="progress-bar">
+            <div class="progress-fill" style="width: 80%">80% - Proficient</div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <h3>Professional Development</h3>
+
+    <p>Beyond technical skills, Week 2 fostered important professional competencies:</p>
+
+    <ul>
+        <li><strong>Project Management:</strong> Planning and executing a complex multi-section website</li>
+        <li><strong>Time Management:</strong> Balancing multiple tasks and meeting project milestones</li>
+        <li><strong>Problem-Solving:</strong> Researching solutions independently and applying new techniques</li>
+        <li><strong>Attention to Detail:</strong> Ensuring pixel-perfect designs and consistent styling</li>
+        <li><strong>Code Organization:</strong> Maintaining clean, commented, and structured code</li>
+        <li><strong>Self-Learning:</strong> Exploring documentation and tutorials for external libraries</li>
+    </ul>
+
+
+
+
+
+    <h3>Conclusion</h3>
+
+    <p> advancing from basic skills to professional-level web development capabilities. The completion of a
+        comprehensive, responsive website demonstrates readiness to work on real-world projects. The integration of
+        external resources, multimedia elements, and advanced CSS techniques showcases adaptability and willingness to
+        learn new technologies.</p>
+
+    <p>The two-week period has provided a solid foundation in front-end web development, with practical experience
+        across HTML5, CSS3, responsive design, and professional website architecture. Moving forward, the addition of
+        JavaScript programming will enable the creation of fully interactive web applications, representing the next
+        exciting phase of development.</p>
+
+
+
+</body>
+
+</html>

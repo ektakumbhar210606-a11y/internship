@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Report - Week 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            padding: 40px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .header h2 {
+            color: #34495e;
+            font-size: 20px;
+            font-weight: normal;
+            margin-bottom: 15px;
+        }
+
+        .info-box {
+            background: #ecf0f1;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 25px;
+        }
+
+        .info-box p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .info-box strong {
+            color: #2c3e50;
+            display: inline-block;
+            width: 150px;
+        }
+
+        h3 {
+            color: #2c3e50;
+            font-size: 18px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        h4 {
+            color: #34495e;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        p,
+        li {
+            font-size: 14px;
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .project-box {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .project-box h4 {
+            color: #27ae60;
+            margin-top: 0;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .skill-item {
+            background: #e8f5e9;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        .skill-item::before {
+            content: "✓ ";
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 13px;
+        }
+
+        table th {
+            background: #34495e;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .highlight-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #2c3e50;
+            text-align: center;
+            font-size: 12px;
+            color: #7f8c8d;
+        }
+
+        .signature-section {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .signature-box {
+            text-align: center;
+        }
+
+        .signature-line {
+            border-top: 2px solid #333;
+            width: 200px;
+            margin-top: 50px;
+            padding-top: 5px;
+            font-size: 12px;
+        }
+
+        .page-break {
+            page-break-after: always;
+        }
+
+        @media print {
+            body {
+                padding: 20px;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        .download-btn {
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .download-btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>DHARMSINH DESAI UNIVERSITY</h1>
+        <h2>FACULTY OF TECHNOLOGY AND INFORMATION SCIENCE <br />BCA DEPARTMENT <br /> SEMESTER-VI</h2>
+        <p style="font-size: 14px; margin-top: 10px;"><b>1-DEC-25 To 5-DEC-25</b> </p>
+    </div>
+
+    <div class="info-box">
+        <p><strong>Name:</strong> Ekta Kumbhar / Bhavika Dalbanjan</p>
+        <p><strong>Id:</strong> 23BCUOS053 /23BCUOS022</p>
+        <p><strong>Roll No:</strong> BC043 / BC017 </p>
+        <p><strong>Group code:</strong> S4</p>
+    </div>
+
+    <h3>Week 1 Learning Objectives</h3>
+    <!-- <ul>
+        <li><b>MON 1-DEC:</b><br /> Understand HTML document structure and semantic elements</li>
+        <li><b>TUE 2-DEC:</b><br /> Learn CSS fundamentals for styling and layout control</li>
+        <li><b>WED 3-DEC:</b><br /> Explore different positioning models (static, relative, absolute, fixed)</li>
+        <li><b>THU 4-DEC:</b><br /> Implement basic HTML forms with various input types</li>
+        <li><b>FRI 5-DEC:</b><br /> Create responsive gallery layouts using Flexbox</li>
+
+    </ul> -->
+
+    <table>
+        <tr>
+            <th>Day</th>
+            <th>Date</th>
+            <th>Learning Objectives</th>
+        </tr>
+        <tr>
+            <td>MON</td>
+            <td>1-DEC</td>
+            <td>Understand HTML document structure and semantic elements</td>
+        </tr>
+        <tr>
+            <td>TUE</td>
+            <td>2-DEC</td>
+            <td>Learn CSS fundamentals for styling and layout control</td>
+        </tr>
+        <tr>
+            <td>WED</td>
+            <td>3-DEC</td>
+            <td>Explore different positioning models (static, relative, absolute, fixed)</td>
+        </tr>
+        <tr>
+            <td>THU</td>
+            <td>4-DEC</td>
+            <td>Implement basic HTML forms with various input types</td>
+        </tr>
+        <tr>
+            <td>FRI</td>
+            <td>5-DEC</td>
+            <td>Create responsive gallery layouts using Flexbox</td>
+        </tr>
+    </table>
+    <br /> <br />
+    <div class="signature-section">
+        <div class="signature-box">
+            <div class="signature-line">
+                Internal Guide<br>
+                [Prof. Swati Patel]<br />
+                Assistant Professor, <br />BCA Department
+            </div>
+        </div>
+        <div class="signature-box">
+            <div class="signature-line">
+                External Guide<br>
+                [Mr. Mihir Patwa]<br />
+                Groovy technoweb Pvt. Ltd.
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <h3>Projects Completed</h3>
+
+    <div class="project-box">
+        <h4>1. Html Basic</h4>
+        <p><strong>Description:</strong> core fundamentals of HTML (HyperText Markup Language) and created
+            simple webpages to understand how structure, formatting, and basic elements work.</p>
+
+        <p><strong>Key Features Implemented:</strong></p>
+        <ul>
+            <li>Basic HTML document structure </li>
+            <li>Understanding elements, tags, attributes, and nesting</li>
+            <li>Working with headings and paragraphs </li>
+            <li>Adding text formatting like bold, italic, underline</li>
+            <li>Creating hyperlinks using </a></li>
+            <li>Introduction to semantic HTML tags </li>
+            <li>Understanding block-level vs inline elements</li>
+        </ul>
+
+
+    </div>
+    <div class="project-box">
+        <h4>2. CSS Basics</h4>
+
+        <p><strong>Description:</strong> Learned the core fundamentals of CSS (Cascading Style Sheets) and practiced
+            applying styles to HTML elements to improve visual appearance, layout, and user interface design.</p>
+
+        <p><strong>Content Covered:</strong></p>
+        <ul>
+            <li>Understanding CSS syntax: selectors, properties, and values</li>
+            <li>Applied styles using inline, internal, and external CSS</li>
+            <li>Styled text using font size, color, weight, and family</li>
+            <li>Worked with the CSS Box Model (margin, padding, border)</li>
+            <li>Used class and ID selectors for targeted styling</li>
+            <li>Applied background colors, borders, and spacing to elements</li>
+            <li>Introduction to layout techniques using Flexbox</li>
+        </ul>
+    </div>
+
+    <div class="project-box">
+        <h4>3. Basic Demonstration Projects</h4>
+        <p><strong>Project Description:</strong> A series of smaller demonstration projects created to reinforce
+            learning and explore various CSS patterns and techniques.</p>
+
+        <p><strong>Content Covered:</strong></p>
+        <ul>
+            <li>Multiple centering techniques (Flexbox, Grid, positioning)</li>
+            <li>CSS Grid basic demonstrations</li>
+            <li>Layout patterns and responsive behaviors</li>
+            <li>Practical implementation of common design patterns</li>
+        </ul>
+        <img src="Centerpos.jpeg" style="width: -webkit-fill-available;" alt="demonstration" />
+        <img src="dem.png" style="width: -webkit-fill-available;" alt="demonstration" />
+    </div>
+
+    <div class="project-box">
+        <h4>4. Form Implementation (Form.html)</h4>
+        <p><strong>Project Description:</strong> Created a comprehensive HTML form demonstrating various form elements,
+            input types, and validation techniques commonly used in web applications.</p>
+
+        <p><strong>Key Components:</strong></p>
+        <ul>
+            <li>Personal details fieldset with legend</li>
+            <li>Text input fields (First Name, Last Name, Email)</li>
+            <li>Radio buttons for single-choice selection (Gender)</li>
+            <li>Checkboxes for multiple-choice options (Hobbies)</li>
+            <li>Dropdown select menus (Car selection)</li>
+            <li>Form validation attributes (required, pattern, type)</li>
+            <li>Submit and reset buttons</li>
+        </ul>
+        <img src="formss.jpeg" alt="form" style="width: -webkit-fill-available;" />
+    </div>
+
+    <div class="project-box">
+        <h4>5. Image Gallery </h4>
+        <p><strong>Project Description:</strong> Designed and implemented a responsive image gallery showcasing proper
+            image management, layout techniques, and interactive hover effects.</p>
+
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li>Flexbox-based responsive grid layout</li>
+            <li>Multiple gallery items with consistent sizing</li>
+            <li>Image descriptions and captions</li>
+            <li>Smooth hover effects with scale transformations</li>
+            <li>Responsive behavior adapting to viewport size</li>
+            <li>Visual feedback on user interaction</li>
+        </ul>
+        <img src="Gallery.jpeg" style="width: -webkit-fill-available;" alt="gallery" />
+
+    </div>
+
+    <div class="page-break"></div>
+
+
+
+
+    <h3>Technical Skills Acquired</h3>
+
+    <div class="skills-grid">
+        <div class="skill-item">HTML5 semantic markup</div>
+        <div class="skill-item">CSS3 Flexbox layouts</div>
+        <div class="skill-item">CSS Grid fundamentals</div>
+        <div class="skill-item">Form elements and validation</div>
+        <div class="skill-item">CSS positioning models</div>
+        <div class="skill-item">Responsive design basics</div>
+        <div class="skill-item">Hover effects and transitions</div>
+        <div class="skill-item">Box model understanding</div>
+        <div class="skill-item">Layout best practices</div>
+        <div class="skill-item">Code organization</div>
+    </div>
+
+
+
+
+
+    <h3>Conclusion</h3>
+    <p>Week 1 of the internship successfully established a strong foundation in HTML and CSS development. Through the
+        completion of five diverse projects, essential web development skills were acquired and practiced. The
+        progression from basic structure to styled, responsive components demonstrates steady growth and understanding
+        of front-end technologies. This foundation provides an excellent platform for advancing to more complex topics
+        in subsequent weeks.</p>
+
+
+
+
+</body>
+
+</html>
