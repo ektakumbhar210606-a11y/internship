@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Onojie</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .main-container {
+            width: 100%;
+        }
+
+
+        .navbar {
+            padding: 25px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 140px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .active {
+            color: #ff4e15;
+            font-weight: bold;
+        }
+
+
+        .hero {
+            position: relative;
+            height: calc(100vh - 112px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 700px;
+        }
+
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin: 20px 0;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        .main-btn {
+            background: #ff4e15;
+            color: white;
+        }
+
+        .outline-btn {
+            border: 2px solid white;
+            color: white;
+        }
+
+
+        .hero-images {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-top: auto;
+            margin-bottom: -120px;
+        }
+
+
+        .phone {
+            transition: all 0.3s ease;
+        }
+
+
+        .phone-left {
+            width: 230px;
+
+            position: absolute;
+            left: 50%;
+            transform: translate(-193px, -160px);
+            z-index: 2;
+        }
+
+
+        .phone-right {
+            width: 300px;
+            transform: translate(56px, -104px);
+            z-index: 1;
+        }
+
+
+
+
+        .works {
+            text-align: center;
+        }
+
+
+        .divider-line {
+            width: 70%;
+            height: 1px;
+            background: #dcdcdc;
+            margin: 0 auto 40px;
+        }
+
+
+        .app-step {
+            max-width: 1200px;
+            margin: 140px auto;
+            padding: 0 40px;
+
+            display: flex;
+            align-items: center;
+            gap: 120px;
+        }
+
+        .reverse {
+            flex-direction: row-reverse;
+        }
+
+        .step-image img {
+            width: 320px;
+        }
+
+        .step-content h3 {
+            font-size: 40px;
+            margin: 20px 0;
+        }
+
+        .step-tag {
+            color: #ff4e15;
+            font-weight: bold;
+        }
+
+        .footer {
+            border-top: 1px solid #e6e6e6;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 25px;
+        }
+
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .hero {
+                height: auto;
+                padding: 100px 20px 160px;
+            }
+
+            .hero-images {
+                margin-bottom: -40px;
+            }
+
+            .phone {
+                width: 85%;
+                max-width: 300px;
+            }
+
+            .phone-left {
+                width: 200px;
+                transform: translate(-160px, -137px);
+            }
+
+            .phone-right {
+                width: 230px;
+                transform: translate(37px, -83px);
+            }
+
+
+            .app-step,
+            .reverse {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+
+            .footer-logo {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+
+            <ul class="nav-links">
+                <li><a class="active" href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Faq</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+
+        <section class="hero">
+
+            <img src="images/Rectangle 48.png" class="hero-bg" alt="food">
+
+            <div class="hero-content">
+                <p class="small-title">Food app</p>
+
+                <h1>
+                    Why stay hungry when<br>
+                    you can order form Bella Onojie
+                </h1>
+
+                <p class="sub-text">
+                    Download the bella onojie's food app now on
+                </p>
+
+                <div class="btn-group">
+                    <a href="#" class="btn main-btn">Playstore</a>
+                    <a href="#" class="btn outline-btn">App store</a>
+                </div>
+            </div>
+        </section>
+        <div class="hero-images">
+            <img src="images/Rectangle.png" class="phone phone-left" alt="phone 1">
+            <img src="images/Rectangle.png" class="phone phone-right" alt="phone 2">
+        </div>
+
+
+        <section class="works">
+            <div class="divider-line"></div>
+            <h2>How the app works</h2>
+        </section>
+
+
+        <section class="app-step">
+            <div class="step-image">
+                <img src="images/mobile1.png">
+            </div>
+            <div class="step-content">
+                <span class="step-tag">Create an account</span>
+                <h3>Create/login to an existing account to get started</h3>
+                <p>An account is created with your email and a desired password</p>
+            </div>
+        </section>
+
+
+        <section class="app-step reverse">
+            <div class="step-image">
+                <img src="images/mobile2.png">
+            </div>
+            <div class="step-content">
+                <span class="step-tag">Explore varieties</span>
+                <h3>Shop for your favorites meal as e dey hot.</h3>
+                <p>Shop for your favorite meals or drinks and enjoy while doing it.</p>
+            </div>
+        </section>
+
+
+        <section class="app-step">
+            <div class="step-image">
+                <img src="images/mobile3.png">
+            </div>
+            <div class="step-content">
+                <span class="step-tag">Checkout</span>
+                <h3>When you done check out and get it delivered.</h3>
+                <p>When you done check out and get it delivered with ease.</p>
+            </div>
+        </section>
+
+
+        <footer class="footer">
+            <div class="footer-container">
+
+                <div class="footer-logo">
+                    <img src="images/logo.png">
+                </div>
+
+                <div class="footer-social">
+                    <img src="images/twitter.png">
+                    <img src="images/facebook.png">
+                    <img src="images/instagram.png">
+                </div>
+
+                <div class="footer-copy">
+                    Copyright 2020 Bella Onojie.com
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
