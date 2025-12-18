@@ -16,3 +16,13 @@ for(i=0;i<a;i++){
 let v='Having fun?';
 console.log(v.substring(7,10));
 
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+for (const key in person) {
+  console.log(`${key}: ${person[key]}`);
+}
+
+
